@@ -15,7 +15,12 @@ window.addEventListener('load', () => {
                 }
 
     // Jos käyttäjä ei syötä mitään, annetaan alert
-    if (task.content == '' || task.content.length <= 3) {
+    if (task.content == '') {
+      task.valid = false;
+      document.getElementById("newTodo").style.border = "2px solid red";
+        alert("Please write a task");
+        return;
+    }  else if (task.content.length <= 3) {
       task.valid = false;
       document.getElementById("newTodo").style.border = "2px solid red";
         alert("Your task should have more than 3 characters");
@@ -86,7 +91,7 @@ window.addEventListener('load', () => {
               } 
 
       // Luodaan evenListener tehtävän poistamiseksi listalta
-          taskDeleteElement.addEventListener('click', (e) => {
+          taskDeleteElement.addEventListener('click', () => {
             if (taskHolder.classList == "task"){
               todosHolder.removeChild(taskHolder);
             } else {
