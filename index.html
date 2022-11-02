@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <title>Todo app</title>
+  </head>
+  <body>
+    <div class="background">
+      <h1>Keep yourself organized with Todo-app</h1>
+      <form id="todoForm">
+        <input type="text" id="newTodo" placeholder="Write new todo" />
+        <input type="submit" id="newTodoSubmit" value="Add" />
+      </form>
+
+      <section class="task-list">
+        <h2>My Todos:</h2>
+        <div id="tasks">
+          <!--  
+        <div class="done">
+          <input type="checkbox" class="check" />
+        </div>
+        <div class="content">
+          <input type="text" class="text" value="My task" readonly />
+        </div>
+        <div class="actions">
+          <button class="delete">Delete</button>
+        </div> 
+      -->
+        </div>
+
+        <h2>Completed Todos:</h2>
+        <div id="completed-tasks"></div>
+      </section>
+      <div id="footer">
+        <button type="button" id="resetBtn">Clear All Tasks</button>
+      </div>
+    </div>
+  </body>
+</html>
